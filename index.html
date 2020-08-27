@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Animation</title>
+    <style>
+      #box {
+        width: 18%;
+        height: 160px;
+        background-color: darkcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+              const box = document.querySelector('#box');
+              box.animate([
+                  {transform: 'translate(0,0)', background:'darkcyan'},
+                  {transform: 'translate(400px,0)', background:'red'},
+                  {transform: 'translate(400px,400px)', background:'blue'},
+                  {transform: 'translate(0,400px)', background:'green'},
+                  {transform: 'translate(0,0)', background:'darkcyan'},
+              ],
+
+              {
+                  duration:4000,
+                  iterations:3
+
+              })
+
+        //  below is the code in CSS if we didnot want to do it in js
+
+    //           div {
+    //     width: 100px;
+    //     height: 100px;
+    //     background-color: red;
+    //     position: relative;
+    //     animation-name: example;
+    //     animation-duration: 4s;
+    //     animation-iteration-count: 3;
+    //   }
+
+    //   @keyframes example {
+    //     0%   {background-color:red; left:0px; top:0px;}
+    //     25%  {background-color:yellow; left:200px; top:0px;}
+    //     50%  {background-color:blue; left:200px; top:200px;}
+    //     75%  {background-color:green; left:0px; top:200px;}
+    //     100% {background-color:red; left:0px; top:0px;}
+    //   }
+    </script>
+  </body>
+</html>

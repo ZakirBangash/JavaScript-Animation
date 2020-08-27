@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Animation</title>
+    <style>
+      #box {
+        width: 18%;
+        height: 160px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Warning
+    </div>
+
+    <script>
+              const box = document.querySelector('#box');
+              box.animate([
+                  {transform: 'scale(0.5)',background:'white', color:'white'},
+                  {transform: 'scale(1)', background:'red',color:'black'},
+                  {transform: 'scale(0.5)', background:'white',color:'white'},
+                 
+              ],
+
+              {
+                  duration:4000,
+                  iterations:3
+
+              })
+
+      
+    </script>
+  </body>
+</html>
